@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Servidor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="g_Serv">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>170</y>
+      <width>231</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Servior</string>
+    </property>
+    <widget class="QLabel" name="lab_url">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Url</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="edit_url">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>127.0.0.1</string>
+     </property>
+     <property name="placeholderText">
+      <string>127.0.0.1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_puerto">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>68</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Puerto</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spin_puerto">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>60</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>65535</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ini_serv">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Iniciar Servidor</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spin_timeout">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>90</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_timeout">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>68</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Timeout</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="g_conf_juego">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>20</y>
+      <width>231</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Configuracion del Juego</string>
+    </property>
+    <widget class="QLabel" name="lab_colum">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>68</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Columnas</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spin_colum">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_filas">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>68</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Filas</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spin_filas">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>60</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spin_espera">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>90</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>250</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab_espera">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Espera</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="iniciar_juego">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>390</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Iniciar Juego</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>441</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>0</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>0</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>0</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>0</number>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="terminar_juego">
+    <property name="geometry">
+     <rect>
+      <x>498</x>
+      <y>450</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Terminar Juego</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
