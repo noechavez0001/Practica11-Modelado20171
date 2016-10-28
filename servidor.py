@@ -67,9 +67,10 @@ class servidorInterfaz(QtGui.QDialog):
 		print "hola"
 		puerto = self.ui.spin_puerto.value()
 		my_ip = self.ui.edit_url.text()
-		if (puerto == 0):
-			puerto = 8000
 		self.proxy = SimpleXMLRPCServer((str(my_ip), puerto), allow_none = True)
+		if (puerto == 0):
+			puerto = self.proxy.server_address[1]
+			self.ui.spin_puerto.setValue(puerto)
 		self.proxy.timeout= self.ui.spin_timeout.value()
 		self.timer_serv = QtCore.QTimer()
 		self.timer_serv.timeout.connect(lambda: self.espera_coneccion())
@@ -134,7 +135,7 @@ class servidorInterfaz(QtGui.QDialog):
 					self.ui.tableWidget.item(x[0], c).setBackground(QtGui.QColor(sn.color['r'],sn.color['g'],sn.color['b']))
 					del sn.cuerpo[-1]
 					
-				#self.serp_viva(sn)
+				self.serp_viva(sn)
 
 	def quitar_serp(self,snake):
 		self.serpientes.remove(snake)
